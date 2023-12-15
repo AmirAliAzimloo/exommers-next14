@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 import prismadb from "@/lib/prismadb";
 
 
-export async function Post(
+export async function POST(
     req:Request
 ){
     try {
