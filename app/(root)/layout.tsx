@@ -3,10 +3,9 @@ import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
 
-export default async function DashboardLayout(
-    {children,params}:{
-        children: React.ReactNode;
-        params : { storeId : string }
+export default async function SetupLayout(
+    {children}:{
+    children: React.ReactNode;
     }
     ){
 
@@ -18,18 +17,16 @@ export default async function DashboardLayout(
 
         const store = await prismadb.store.findFirst({
             where:{
-                id : params.storeId ,
                 userId
             }
         });
 
-        if(!store){
-            redirect("/")
+        if(store){
+            redirect(`/${store.id}`)
         }
 
         return(
             <>
-            <div>this will be navbar</div>
             {children}
             </>
         )
