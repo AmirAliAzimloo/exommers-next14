@@ -46,7 +46,8 @@ export const StoreModal = () => {
 
         const response = await axios.post("/api/stores",values);
 
-        toast.success("Store Created .")
+        // * use window object because create store in db has 100 ms delay and router from next/navigation have not good ux in this case and also assign from location from window object have been reload location and user can't see again modal create store .
+        window.location.assign(`${response.data.id}`)
 
     } catch (error) {
         toast.error("Something Went Wrong .")
