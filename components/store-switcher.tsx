@@ -59,6 +59,7 @@ export default function StoreSwitcher({
                 w-4
                 "
           />
+          
           Current Store
 
           <ChevronsUpDown className="ml-auto h-4 w-4 shrink-0 opacity-50" />
