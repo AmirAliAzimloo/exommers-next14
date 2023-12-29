@@ -6,7 +6,7 @@ import { CategoryColumn } from "./components/columns"
 import { CategoriesClient } from "./components/client";
 
 const CategoriesPage = async ({
-  params
+  params 
 }: {
   params: { storeId: string }
 }) => {
