@@ -5,7 +5,7 @@ interface useProductModalStore {
   isEdit: boolean;
   editId?: string;
   onOpen: () => void;
-  onEdit: (id: string) => void;
+  onEdit: (id: string) => void; 
   onClose: () => void; 
 }
 
