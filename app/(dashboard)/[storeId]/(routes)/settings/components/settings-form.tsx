@@ -66,6 +66,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({
   };
 
   const onDelete = async () => {
+    
     try {
       setLoading(true);
       await axios.delete(`/api/stores/${params.storeId}`);
