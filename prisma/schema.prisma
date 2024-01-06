@@ -46,7 +46,7 @@ model Category {
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
 
-  @@index([storeId])
+  @@index([storeId]) 
   @@index([billboardId])
 }
 
