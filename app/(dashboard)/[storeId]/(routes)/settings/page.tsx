@@ -12,6 +12,8 @@ const SettingsPage = async ({
 }) => { 
   const { userId } = auth();
 
+  
+
   if (!userId) {
     redirect('/sign-in');
   }
