@@ -1,5 +1,6 @@
 // import Stripe from "stripe";
-// import { NextResponse } from "next/server";
+import { NextResponse } from "next/server";
+
 
 // import { stripe } from "@/lib/stripe";
 // import prismadb from "@/lib/prismadb";
@@ -14,10 +15,10 @@
 //   return NextResponse.json({}, { headers: corsHeaders });
 // }
 
-// export async function POST(
-//   req: Request,
-//   { params }: { params: { storeId: string } }
-// ) {
+export async function POST(
+  req: Request,
+  { params }: { params: { storeId: string } }
+) {
 //   const { productIds } = await req.json();
 
 //   if (!productIds || productIds.length === 0) {
@@ -46,7 +47,7 @@
 //       }
 //     });
 //   });
-
+ 
 //   const order = await prismadb.order.create({
 //     data: {
 //       storeId: params.storeId,
@@ -80,4 +81,6 @@
 //   return NextResponse.json({ url: session.url }, {
 //     headers: corsHeaders
 //   });
-// };
+
+  return NextResponse.json("true");
+};
